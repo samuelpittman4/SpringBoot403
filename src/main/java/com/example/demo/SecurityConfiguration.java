@@ -24,7 +24,7 @@ public class SecurityConfiguration extends
                 .authorizeRequests()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin();
+                .formLogin().loginPage("/login").permitAll();
     }
 
     @Override
